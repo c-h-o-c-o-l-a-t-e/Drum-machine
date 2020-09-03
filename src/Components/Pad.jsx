@@ -14,11 +14,10 @@ export default function Pad(props){
         props.updateDisplay(props.desc)
     }
     document.addEventListener('keydown',handleKeyPress);
-    return(<div>
-        <button className='drum-pad btn btn-light' id={props.desc} onClick={handleClick}>
+    return(
+        <div className='drum-pad btn btn-outline-light' id={props.desc} onClick={handleClick}>
             {props.keyTrigger}
             <audio src={props.url} className='clip' id={props.keyTrigger}></audio>
-        </button>
         </div>
     )
 }
